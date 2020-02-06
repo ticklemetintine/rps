@@ -1,26 +1,66 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
+import "font-awesome/css/font-awesome.min.css";
+import { Grid, Button } from "@material-ui/core";
 
-function App() {
+export default function App(props) {
+  const [play, setPlay] = React.useState(0);
+
+  const handlePlay = play => {
+    setPlay(play);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <Grid container className="container">
+      <Grid
+        item
+        container
+        direction="row"
+        justify="center"
+        alignItems="center"
+        xs={12}
+        sm={6}
+        className="left"
+      >
+        <p className="hand">
+          <i className="fa fa-hand-rock-o" aria-hidden="true"></i>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      </Grid>
+      <Grid
+        item
+        container
+        direction="row"
+        justify="center"
+        alignItems="center"
+        xs={12}
+        sm={6}
+        className="right"
+      >
+        <p className="hand">
+          <i className="fa fa-hand-rock-o" aria-hidden="true"></i>
+        </p>
+      </Grid>
+
+      <div className="select-play">
+        <h1>Player</h1>
+        <Grid container>
+          <Grid item xs={4}>
+            <Button className="hand">
+              <i className="fa fa-hand-rock-o" aria-hidden="true"></i>
+            </Button>
+          </Grid>
+          <Grid item xs={4}>
+            <Button className="hand">
+              <i className="fa fa-hand-paper-o" aria-hidden="true"></i>
+            </Button>
+          </Grid>
+          <Grid item xs={4}>
+            <Button className="hand scissors">
+              <i className="fa fa-hand-scissors-o" aria-hidden="true"></i>
+            </Button>
+          </Grid>
+        </Grid>
+      </div>
+    </Grid>
   );
 }
-
-export default App;

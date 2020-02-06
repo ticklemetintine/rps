@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+@import "scss/colors";
+// @import "scss/transitions";
+
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: $white;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.container {
+    min-height: 100vh;
+}
+
+.left {
+    background: $blue;
+}
+
+.right {
+    background: $pink;
+
+    .hand i {
+        transform: rotate(-90deg) scaleX(-1);
+    }
+}
+
+.hand {
+    font-size: 15em;
+
+    i {
+        transform: rotate(90deg);
+    }
+
+    &.scissors i {
+        transform: rotate(360deg) scaleX(-1);
+    }
+}
+
+.select-play {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    background: rgba($white, 0.4);
+    width: 40%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 1440px;
+    padding: 40px;
+
+    h1 {
+        margin-top: 0;
+    }
+
+    .hand {
+        font-size: 5em;
+        color: $white;
+        transition: transform .2s;
+
+        &:hover {
+            background: transparent;
+            transform: scale(1.5);
+        }
+    }
+}
