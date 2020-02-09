@@ -1,0 +1,55 @@
+@media (max-width: 768px) {
+  .hand {
+    font-size: 8em;
+  }
+  .field .results {
+    height: 50%;
+  }
+}
+
+@media (max-width: 568px) {
+  .home {
+    &.hide {
+      align-items: flex-start;
+    }
+  }
+  .hand {
+    font-size: 8em;
+  }
+  .field {
+    min-height: 80vh;
+
+    &.Computer {
+      min-height: 85vh;
+    }
+
+    .hand {
+      margin: 0;
+    }
+
+    .results {
+      height: 100%;
+    }
+  }
+
+  .select-play {
+    background: $off-white;
+    height: 20vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.Computer {
+      height: 15vh;
+    }
+
+    h3 {
+      margin: 0;
+    }
+
+    .hand {
+      font-size: 2em;
+    }
+  }
+}
