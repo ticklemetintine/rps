@@ -1,0 +1,50 @@
+.home {
+    height: 100vh;
+
+    h1 {
+        text-align: center;
+        color: $black;
+    }
+}
+
+.select-mode {
+    a {
+        background: $off-white;
+        background: $off-white;
+        text-align: center;
+        transition: all 0.1s ease-in-out;
+        display: block;
+        color: $black;
+        text-decoration: none;
+        height: 50px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: -6px -6px 10px rgba($white, 0.8),
+            6px 6px 10px rgba($black, 0.2);
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        &:hover {
+            color: $off-white;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            background: $black;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 100%;
+            z-index: -1;
+            transition: top 0.09s ease-in;
+        }
+
+        &:hover:before {
+            top: 0;
+        }
+    }
+}

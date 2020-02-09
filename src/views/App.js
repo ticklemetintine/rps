@@ -1,6 +1,4 @@
 import React from "react";
-import "./App.scss";
-import "font-awesome/css/font-awesome.min.css";
 import { Grid, Button } from "@material-ui/core";
 
 export default function App(props) {
